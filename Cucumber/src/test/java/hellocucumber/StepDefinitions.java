@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class StepDefinitions {
@@ -15,24 +14,9 @@ public class StepDefinitions {
     private static MoodleActuator moodle_student;
     private static MoodleActuator moodle_teacher;
 
-
-
-    public void moodleInit(String student_username, String student_password) {
-        System.out.println("--------------- INITIALIZING MOODLE TEST - OPENING WEBPAGE ---------------");
-        if(allMoodles == null){
-            allMoodles = new ArrayList<>();
-        }
-        moodle_student = new MoodleActuator();
-        allMoodles.add(moodle_student);
-//        moodle.initSession(student_username, student_password, teacher_username, teacher_password);
-        moodle_student.initSession(student_username, student_password);
-    }
-
 /*
     Student Scenario
 */
-
-
     @Given("User enters moodle with username as {string} and password as {string} and enters forum Page")
     public void userEntersMoodleWithUsernameAsAndPasswordAsAndEntersForumPage(String username, String password) {
         //moodleInit(username, password);
@@ -60,10 +44,10 @@ public class StepDefinitions {
         System.out.println(moodle_student.successfullyPostMessage());
     }
 
+
     /*
     Teacher Scenario
 */
-
     @Given("User enters moodle with username as {string} and password as {string} and enters main course Page")
     public void userEntersMoodleWithUsernameAsAndPasswordAsAndEntersMainCoursePage(String username, String password) {
         moodle_teacher = new MoodleActuator();
@@ -96,33 +80,4 @@ public class StepDefinitions {
         System.out.println("Forum Successfully Deleted");
     }
 
-
-
-
-
-
-
-
-/*
-    // $$*TODO* explain what this step does$$
-    @When("User Navigate to add discussion topic")
-    public void navigateTo_add_discussion_topic() {
-        moodle.goToAddDiscussionPage();
-    }
-    @When("User Navigate to \"add discussion topic\"")
-    public void navigateTo_add_discussion_topic() {
-    }
-    @When("^User enters SubjectName \"([^\"]*)\" and Message \"([^\"]*)\"$")
-    public void enterLoginInfo(String username, String password){
-        moodle.enterLoginInfo(username, password);
-    }
-
-    // $$*TODO* explain what this step does$$
-    @Then("the scenario passes")
-    public void theScenarioPasses() {
-    }
-
-    @And("User enters Subject <Subject> and Message <Message>")
-    public void userEntersSubjectSubjectAndMessageMessage() {
-    }*/
 }

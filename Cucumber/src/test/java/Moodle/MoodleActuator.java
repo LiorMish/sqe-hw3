@@ -26,7 +26,6 @@ public class MoodleActuator {
         // launch website -> localhost
         webDriver_student.get("http://localhost/");
 
-
         // maximize the window - some web apps look different in different sizes
         webDriver_student.manage().window().maximize();
 
