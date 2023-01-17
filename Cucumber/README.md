@@ -1,4 +1,4 @@
-# Testing Mםםגךק using Cucumber
+# Testing Moodle using Cucumber
 This directory contains the cucumber files for testing the Moodle module of the Moodle application.
 
 ## Running the tests
