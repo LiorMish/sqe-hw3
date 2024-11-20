@@ -1,5 +1,5 @@
-# Assignment 3: Software Quality Engineering
-This is a repository for assignment 3 of the Software Quality Engineering course at the [Ben-Gurion University](https://in.bgu.ac.il/), Israel.
+# Software Quality Engineering
+This is a repository of the Software Quality Engineering course at the [Ben-Gurion University](https://in.bgu.ac.il/), Israel.
 
 ## Assignment Description
 In this assignment, we tested an open-source software called [$$*TODO* software name$$](https://address-of-the-project.com).
